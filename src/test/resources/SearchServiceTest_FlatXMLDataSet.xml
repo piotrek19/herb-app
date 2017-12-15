@@ -1,0 +1,83 @@
+<dataset>
+
+    <producer
+        producer_id="1"
+        address="producer"
+        description="producer"
+        email="producer"
+        name="producer"
+        phone="producer"
+    />
+    
+
+	<product
+        product_id="1"
+        name="pokrzywa"
+        description="ho ho ho"
+        price="12.12"
+        quantity="1"
+        producer_id="1"
+    />
+    
+    <product
+        product_id="2"
+        name="tag4"
+        description="ho ho ho"
+        price="12.12"
+        quantity="2"
+        producer_id="1"
+    />
+    
+    <product
+        product_id="3"
+        name="ziele"
+        description="ho ho ho"
+        price="12.12"
+        quantity="3"
+        producer_id="1"
+    />
+    
+    
+    <tag
+        tag_id="1"
+        value="tag1"
+    />
+    
+    <tag
+        tag_id="2"
+        value="tag2"
+    />
+    
+    <tag
+        tag_id="3"
+        value="tag3"
+    />
+    
+    <tag
+        tag_id="4"
+        value="tag4"
+    />
+    
+    
+    <product_tag
+        tag_id="1"
+        product_id="1"
+    />
+      
+    <product_tag
+        tag_id="2"
+        product_id="1"
+    />
+    
+    <product_tag
+        tag_id="3"
+        product_id="2"
+    />
+    
+    <product_tag
+        tag_id="4"
+        product_id="3"
+    />
+    
+
+</dataset>

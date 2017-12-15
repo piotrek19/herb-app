@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<ui:composition>
+    <footer>
+        <h:form>
+            <p>
+                Select color scheme:
+                <h:commandLink action="#{theme.setName('light')}">Light</h:commandLink> -
+                <h:commandLink action="#{theme.setName('dark')}">Dark</h:commandLink>
+            </p>
+        </h:form>
+    </footer>
+</ui:composition>
+</html>

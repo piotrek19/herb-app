@@ -1,0 +1,69 @@
+body {
+    background-color: #303030;
+}
+
+a:link, a:visited {
+    color: #9bc850;
+}
+
+a:hover, a:active {
+    color: #c3de96;
+}
+
+input, select {
+    background-color: #808080;
+    color: white;
+    border: 1px solid black;
+    padding: 0.25em;
+}
+
+option {
+    background-color: #808080;
+    color: white;
+}
+
+input[readonly] {
+    color: #c0c0c0;
+}
+
+input[type="submit"], input[type="button"] {
+    border-radius: 0.25em;
+    padding: 0.25em 0.75em;
+}
+
+body > header {
+    background-color: #c43b0e;
+    color: #e5e5e5;
+}
+
+body > section {
+    background-color: #606060;
+    color: white;
+}
+
+body > footer {
+    background-color: #1f778d;
+    color: #e5e5e5;
+}
+
+.shoppingcart-header {
+    background-color: #c43b0e;
+    color: white;
+}
+
+.shoppingcart-row-odd {
+    background-color: #505050;
+}
+
+.shoppingcart-row-even {
+    background-color: #585858;
+}
+
+.shoppingcart-footer {
+    background-color: #1f778d;
+    color: white;
+}
+
+.validation-messages {
+    color: yellow;
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<f:view contentType="text/html"
+	contracts="common,device-desktop,theme-#{theme.name}">
+	<ui:composition template="/templates/page-template.xhtml">
+		<ui:param name="pageTitle" value="Product edition" />
+		<f:metadata>
+			<f:viewParam name="productId" value="#{productDetails.productId}" />
+			<f:viewAction action="#{productDetails.onload}" />
+			<f:viewAction action="#{productDetails.loadProducers}" />
+			
+		</f:metadata>
+
+		<ui:define name="panel-main">
+			<section>
+				<h:messages styleClass="validation-messages" />
+				<h:form>
+					<h:panelGrid columns="2" styleClass="form-grid"
+						columnClasses="form-column-label,form-column-input">
+						<h:outputLabel for="name">Name</h:outputLabel>
+						<h:inputText id="name" value="#{productDetails.product.name}"
+							size="20" />
+							
+						<h:outputLabel for="producer">Producer</h:outputLabel>
+						<h:selectOneMenu id="producer" value="#{productDetails.chosenProducerName}">
+							<f:selectItem itemDisabled="#{true}" itemLabel="#{productDetails.chosenProducerName}" itemValue = "#{productDetails.chosenProducerName}" />
+                      		<f:selectItems value="#{productDetails.producersNames}"/>
+						</h:selectOneMenu>
+ 
+ 
+						<h:outputLabel for="description">Description</h:outputLabel>
+						<h:inputText id="description"
+							value="#{productDetails.product.description}" size="20" />
+
+						<h:outputLabel for="quantity">Quaintity</h:outputLabel>
+						<h:inputText id="quantity" value="#{productDetails.product.quantity}"
+							size="20" />
+
+						<h:outputLabel for="price">Price</h:outputLabel>
+						<h:inputText id="price" value="#{productDetails.product.price}"
+							size="20" />
+							
+						<h:outputLabel for="addTag">Add Tag</h:outputLabel>
+						<h:inputText id="addTag" value="#{productDetails.additionalTagValue}"
+							size="20" />	
+							
+						<h:outputLabel for="removeTag">Remove Tag</h:outputLabel>
+						<h:selectOneMenu id="removeTag" value="#{productDetails.removableTagValue}">
+							<f:selectItem itemLabel="--None--"/>
+                      		<f:selectItems value="#{productDetails.tagValues}"/>
+						</h:selectOneMenu>	
+							
+
+						<h:outputText value="" />
+						<h:commandButton value="Save changes" action="#{productDetails.saveChanges}" />
+					</h:panelGrid>
+				</h:form>
+			</section>
+		</ui:define>
+	</ui:composition>
+</f:view>
+</html>

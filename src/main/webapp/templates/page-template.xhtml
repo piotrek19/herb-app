@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+    <meta charset="UTF-8"/>
+    <title>Shop - #{pageTitle}</title>
+    <h:outputStylesheet name="layout.css"/>
+    <h:outputStylesheet name="theme.css"/>
+</h:head>
+<h:body>
+    <ui:include src="/templates/page-header.xhtml"/>
+    <ui:insert name="panel-top">
+        <ui:include src="/templates/panel-top-default.xhtml"/>
+    </ui:insert>
+    <ui:insert name="panel-medium">
+        <ui:include src="/templates/panel-medium-default.xhtml"/>
+    </ui:insert>
+    <ui:insert name="panel-main">
+        <section>
+            <h1>Main Panel</h1>
+            <p>Placeholder text.</p>
+        </section>
+    </ui:insert>
+    <ui:include src="/templates/page-footer.xhtml"/>
+</h:body>
+</html>

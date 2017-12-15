@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+	<navigation-rule>
+		<from-view-id>/add-product.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{addProduct.submit}</from-action>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/product-details.xhtml</to-view-id>
+			<redirect>
+				<view-param>
+					<name>productId</name>
+					<value>#{addProduct.product.id}</value>
+				</view-param>
+			</redirect>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/add-producer.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{addProducer.submit}</from-action>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/producer-details.xhtml</to-view-id>
+			<redirect>
+				<view-param>
+					<name>producerId</name>
+					<value>#{addProducer.producer.id}</value>
+				</view-param>
+			</redirect>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/edit-product.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{productDetails.saveChanges}</from-action>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/product-details.xhtml</to-view-id>
+			<redirect include-view-params="true" />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>home</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+</faces-config>
+
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#add-product.xhtml" PATH="/add-product.xhtml"
+  SHAPE="32,353,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#add-product.xhtml:0" NAME="item"
+   PATH="/add-product.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="success:#{addProduct.submit}:#product-details.xhtml"
+    NAME="output" PATH="/product-details.xhtml"
+    TARGET="rules:#product-details.xhtml"
+    TITLE="#{addProduct.submit}:success" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#edit-product.xhtml"
+  PATH="/edit-product.xhtml" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#edit-product.xhtml:0" NAME="item"
+   PATH="/edit-product.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="success:#{productDetails.saveChanges}:#product-details.xhtml"
+    NAME="output" PATH="/product-details.xhtml"
+    TARGET="rules:#product-details.xhtml"
+    TITLE="#{productDetails.saveChanges}:success" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#product-details.xhtml"
+  PATH="/product-details.xhtml" SHAPE="240,481,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:*" PATH="*" SHAPE="32,577,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:*:0" NAME="item" PATH="*" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="home::#index.xhtml" NAME="output"
+    PATH="/index.xhtml" TARGET="rules:#index.xhtml" TITLE="home" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#index.xhtml" PATH="/index.xhtml"
+  SHAPE="240,593,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#add-producer.xhtml"
+  PATH="/add-producer.xhtml" SHAPE="32,465,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#add-producer.xhtml:0" NAME="item"
+   PATH="/add-producer.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="success:#{addProducer.submit}:#producer-details.xhtml"
+    NAME="output" PATH="/producer-details.xhtml"
+    TARGET="rules:#producer-details.xhtml"
+    TITLE="#{addProducer.submit}:success" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#producer-details.xhtml"
+  PATH="/producer-details.xhtml" SHAPE="240,705,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

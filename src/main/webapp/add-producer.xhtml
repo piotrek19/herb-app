@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<f:view contentType="text/html"
+	contracts="common,device-desktop,theme-#{theme.name}">
+	<ui:composition template="/templates/page-template.xhtml">
+		<ui:param name="pageTitle" value="Add producer" />
+		<f:metadata>
+			<f:viewAction action="#{addProducer.onload}" />
+		</f:metadata>
+
+		<ui:define name="panel-main">
+			<section>
+				<h:messages styleClass="validation-messages" />
+				<h:form>
+					<h:panelGrid columns="2" styleClass="form-grid"
+						columnClasses="form-column-label,form-column-input">
+						<h:outputLabel for="name">Name</h:outputLabel>
+						<h:inputText id="name" value="#{addProducer.producer.name}"
+							size="20" />
+
+						<h:outputLabel for="description">Description</h:outputLabel>
+						<h:inputText id="description"
+							value="#{addProducer.producer.description}" size="20" />
+
+						<h:outputLabel for="address">Address</h:outputLabel>
+						<h:inputText id="address" value="#{addProducer.producer.address}"
+							size="20" />
+
+						<h:outputLabel for="phone">Phone</h:outputLabel>
+						<h:inputText id="phone" value="#{addProducer.producer.phone}"
+							size="20" />
+							
+						<h:outputLabel for="email">Email</h:outputLabel>
+						<h:inputText id="email" value="#{addProducer.producer.email}"
+							size="20" />
+
+						<h:outputText value="" />
+						<h:commandButton value="Submit" action="#{addProducer.submit}" />
+					</h:panelGrid>
+				</h:form>
+			</section>
+		</ui:define>
+	</ui:composition>
+</f:view>
+</html>
