@@ -1,15 +1,10 @@
 package pl.herbs.backing_beans;
 
-import org.mockito.ArgumentCaptor;
-import org.mockito.Matchers;
 import org.mockito.Mockito;
-import org.mockito.internal.invocation.finder.VerifiableInvocationsFinder;
-
 
 import pl.herbs.data.ProductRepository;
 import pl.herbs.model.Product;
 
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,8 +18,7 @@ public class AddProductTest {
 	
 	
 	@Before
-	public void setup(){
-		
+	public void setup(){		
 	}
 
 	

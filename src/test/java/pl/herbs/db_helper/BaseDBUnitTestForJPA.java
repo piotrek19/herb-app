@@ -14,10 +14,10 @@ import org.dbunit.database.DatabaseConfig;
 import org.dbunit.database.DatabaseConnection;
 import org.dbunit.database.IDatabaseConnection;
 import org.dbunit.ext.h2.H2DataTypeFactory;
-import org.dbunit.dataset.Column;
-import org.dbunit.dataset.filter.IColumnFilter;
+
 import org.h2.Driver;
 import org.h2.tools.RunScript;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
