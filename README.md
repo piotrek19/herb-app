@@ -1,2 +1,14 @@
 # herbs
-Just another JEE project
+Herbs Inventory App
+
+JEE stack:
+- CDI
+- JPA
+- BV
+- JSF
+
+Tests:
+- Junit
+- Mockito
+
+Tested under Wildfly JEE7 Container.
